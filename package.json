@@ -13,7 +13,6 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "ava",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,css}'",

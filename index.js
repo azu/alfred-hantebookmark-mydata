@@ -71,8 +71,8 @@ if (alfy.cache.has(CACHE_KEY)) {
                 date: new Date()
             };
             */
-            alfy.cache.set(CACHE_KEY, JSON.stringify(sortedItems));
             outputSearchData(items);
+            alfy.cache.set(CACHE_KEY, JSON.stringify(sortedItems), { maxAge: 60 * 1000 });
         })
         .catch(error => {
             alfy.error(error);
