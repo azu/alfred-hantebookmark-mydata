@@ -1,6 +1,6 @@
 {
   "name": "alfred-hantebookmark-mydata",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Search My HatenaBookmark in Alfred",
   "license": "MIT",
   "repository": "azu/alfred-hantebookmark-mydata",
