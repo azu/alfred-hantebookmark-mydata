@@ -1,0 +1,55 @@
+{
+  "name": "alfred-hantebookmark-mydata",
+  "version": "0.0.0",
+  "description": "Search My HatenaBookmark in Alfred",
+  "license": "MIT",
+  "repository": "azu/alfred-hantebookmark-mydata",
+  "author": {
+    "name": "azu",
+    "email": "azuciao@gmail.com",
+    "url": "efcl.info"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "ava",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,css}'",
+    "precommit": "lint-staged",
+    "postcommit": "git reset"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow",
+    "alfy"
+  ],
+  "dependencies": {
+    "alfy": "^0.6.0",
+    "date-fns": "^1.29.0",
+    "hatebu-mydata-parser": "^1.0.0"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.3.0",
+    "ava": "^0.18.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 4
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
