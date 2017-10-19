@@ -12,7 +12,8 @@ $ npm install --global alfred-hantebookmark-mydata
 
 ## Settings
 
-1. Install
+1. Install(`npm install --global alfred-hantebookmark-mydata`)
+  - Automatically Install the workflow to your Workflows list.
 2. Open workflow settings
 3. Set Your hatena account name to `HATENA_ACCOUNT_NAME`
 
