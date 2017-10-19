@@ -2,6 +2,8 @@
 
 > Search My HatenaBookmark in Alfred.
 
+![screenshot](https://media.giphy.com/media/3ov9k8YySjxOsxvNHW/giphy.gif)
+
 ## Install
 
 ```
