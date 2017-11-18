@@ -32,7 +32,7 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
 				<key>argumenttrimmode</key>
@@ -44,11 +44,11 @@
 				<key>keyword</key>
 				<string>hatebu</string>
 				<key>queuedelaycustom</key>
-				<integer>3</integer>
+				<integer>2</integer>
 				<key>queuedelayimmediatelyinitially</key>
 				<true/>
 				<key>queuedelaymode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>runningsubtext</key>

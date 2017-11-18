@@ -31,15 +31,15 @@
   ],
   "dependencies": {
     "alfy": "^0.6.0",
-    "date-fns": "^1.29.0",
-    "hatebu-mydata-parser": "^1.0.0"
+    "hatebu-mydata-parser": "^1.0.0",
+    "philtre": "^1.0.2"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
-    "ava": "^0.18.0",
+    "ava": "^0.23.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.3.0",
-    "prettier": "^1.7.4"
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2"
   },
   "prettier": {
     "printWidth": 120,

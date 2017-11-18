@@ -1,7 +1,5 @@
 "use strict";
 const alfy = require("alfy");
-const parse = require("hatebu-mydata-parser").parse;
-const format = require("date-fns/format");
 const CACHE_KEY = "alfred-hantebookmark-mydata";
 const getUserName = () => {
     if (!process.env.HATENA_ACCOUNT_NAME) {
@@ -11,23 +9,14 @@ const getUserName = () => {
     }
     return process.env.HATENA_ACCOUNT_NAME;
 };
-const match = (item, input) => {
-    const lowerInput = input.toLowerCase();
-    const patterns = lowerInput.split(" ");
-    const title = item.title.toLowerCase();
-    const comment = item.comment.toLowerCase();
-    const url = item.url.toLowerCase();
-    return patterns.some(pattern => {
-        return url.includes(pattern) || title.includes(pattern) || comment.includes(pattern);
-    });
-};
 const outputSearchData = items => {
-    const outputItems = items.map(item => {
+    const philtre = require("philtre").philtre;
+    const outputItems = philtre(alfy.input, items).map(item => {
         return {
             match: `${item.url} ${item.title} ${item.comment}`,
             uid: item.url,
             title: item.title,
-            subtitle: `${item.comment} | ${format(item.date, "YYYY-MM-DD")}`,
+            subtitle: `${item.comment} | ${item.date.toISOString()}`,
             arg: item.url,
             mods: {
                 alt: {
@@ -59,6 +48,7 @@ if (alfy.cache.has(CACHE_KEY)) {
             json: false
         })
         .then(response => {
+            const parse = require("hatebu-mydata-parser").parse;
             const items = parse(response);
             const sortedItems = items.sort((a, b) => {
                 return b.date - a.date;
